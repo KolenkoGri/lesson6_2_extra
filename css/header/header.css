@@ -177,6 +177,8 @@
         flex-direction: column;
         align-items: center;
         align-self: center;
+        background-color: transparent;
+        border: none;
     }
 
     .header__menu {
