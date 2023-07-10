@@ -19,7 +19,6 @@
 
     &__block {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 42px;
         font-size: 32px;
         @extend %bigFont;
@@ -28,12 +27,20 @@
         text-align: left;
         align-items: center;
         margin-bottom: 40px;
+
+        @media (min-width:768px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
 
     &__info {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        // grid-template-columns: repeat(5, 1fr);
         grid-template-rows: auto;
+
+        @media (min-width:768px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
 
     &__list {

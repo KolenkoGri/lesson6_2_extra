@@ -19,3 +19,14 @@ $fonts: Lato;
     }
     src: local("Inter"), url("https://fonts.googleapis.com/css2?family=Inter&display=swap") format("ttf");
 }
+
+@mixin laptop {
+    gap: 20px;
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        display: grid;
+        @include laptop;
+    }
+  }

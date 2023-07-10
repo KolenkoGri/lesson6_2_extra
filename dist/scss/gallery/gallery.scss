@@ -1,5 +1,5 @@
 .gallery__list {
-    display: grid;
+    // @include laptop;
     grid-template-columns: repeat(2 , 1fr);
     /* grid-template-rows: 340px 130px 118px 280px 118px 118px 280px 280px; */
     grid-template-rows: repeat(10, auto);

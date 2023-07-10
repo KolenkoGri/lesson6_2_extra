@@ -10,6 +10,7 @@
   text-align: left;
   color: #2D2D2D;
   margin-bottom: 50px;
+  text-align: center;
 }
 .benefit__rows {
   display: grid;
@@ -70,4 +71,10 @@
 }
 .benefit__item {
   color: #2D2D2D;
+}
+
+@media (min-width: 768px) {
+  .benefit__rows {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

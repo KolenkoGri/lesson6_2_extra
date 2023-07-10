@@ -35,7 +35,7 @@
 .header__button::before {
     content: "";
     display: inline-block;
-    background-image: url('./icons/menu_burger.svg');
+    background-image: url('../icons/menu_burger.svg');
     background-position: cover;
     background-repeat: no-repeat;
     width: 10.5px;
@@ -49,14 +49,14 @@
 }
 
 .header__block--one {
-    background-image: url('./icons/user.svg');
+    background-image: url('../icons/user.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
 }
 
 .header__block--two {
-    background-image: url('./icons/basket.svg');
+    background-image: url('../icons/basket.svg');
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -77,7 +77,7 @@
 }
 
 .header__block--three {
-    background-image: url('./icons/heart.svg');
+    background-image: url('../icons/heart.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -105,7 +105,7 @@
 .header__search {
     position: absolute;
     right: 0;
-    background-image: url('./icons/magnifier.svg');
+    background-image: url('../icons/magnifier.svg');
     background-repeat: no-repeat;
     background-color: $color-blue;
     background-position: center;
@@ -232,7 +232,7 @@
     }
     .header__search {
         min-width: 101px;
-        background-image: url('./icons/magnifier_1024.svg');
+        background-image: url('./image/icons/magnifier_1024.svg');
     }
     .header__signature {
         font-size: 15px;
