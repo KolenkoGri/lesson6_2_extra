@@ -108,8 +108,6 @@ const timer = (deadline) => {
     // Плагин для таймера 
 
     const startTimerPlugin = () => {
-        console.log('start');
-
         const {timerDays,
             timerHours,
             timerMinutes,
