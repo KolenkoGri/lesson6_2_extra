@@ -10,6 +10,8 @@ import terser from "gulp-terser";
 import concat from "gulp-concat";
 import sourcemaps from "gulp-sourcemaps";
 import GulpImage from "gulp-image";
+import autoPrefixer from "gulp-autoprefixer";
+import babel from "gulp-babel";
 
 const prepros = true;
 
@@ -39,6 +41,7 @@ export const style = () => {
       .src("src/scss/**/*.scss")
       .pipe(sourcemaps.init())
       .pipe(sass().on("error", sass.logError))
+      // .pipe(autoPrefixer())
       .pipe(
         cleanCss({
           2: {
@@ -59,6 +62,7 @@ export const style = () => {
         extensions: ["css"],
       })
     )
+    // .pipe(autoPrefixer())
     .pipe(
       cleanCss({
         2: {
@@ -75,6 +79,10 @@ export const js = () =>
   gulp
     .src("src/js/**/*.js")
     .pipe(sourcemaps.init())
+    // .pipe(babel({
+    //   presets: ['@babel/preset-env'],
+    //   // ignore: ['src/js/**/*.js']
+    // }))
     .pipe(terser())
     // .pipe(concat("script.js"))
     .pipe(sourcemaps.write("../maps"))

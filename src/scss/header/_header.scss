@@ -142,6 +142,11 @@
     justify-content: flex-end;
 }
 
+.header__icon {
+    background-color: transparent;
+    border: none;
+}
+
 @media (min-width: 768px) {
     .header__navigation {
         padding-top: 28px;
@@ -183,8 +188,6 @@
         flex-direction: column;
         align-items: center;
         align-self: center;
-        background-color: transparent;
-        border: none;
     }
 
     .header__menu {

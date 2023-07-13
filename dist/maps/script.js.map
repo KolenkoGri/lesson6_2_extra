@@ -1,1 +1,1 @@
-{"version":3,"file":"../js/script.js","names":[],"sources":["script.js"],"mappings":"MAAO,6BACA,0BACA,2BACA","sourcesContent":["import './modules/article.js';\nimport './modules/page.js';\nimport './modules/timer.js';\nimport './modules/menu.js';"]}
+{"version":3,"file":"../js/script.js","names":[],"sources":["script.js"],"mappings":"MAAO,6BACA,0BACA,2BACA","sourcesContent":["import './modules/article.js';\r\nimport './modules/page.js';\r\nimport './modules/timer.js';\r\nimport './modules/menu.js';"]}
