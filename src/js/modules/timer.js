@@ -1,11 +1,11 @@
-const timeOfDiscount = document.querySelector('.gallery__text--timer');
-timeOfDiscount.setAttribute('data-deadline', '2023/07/30 14:56');
-const timeOutDiscount = timeOfDiscount.getAttribute('data-deadline');
-const timeDescription = document.querySelector('.gallery__text--descrip');
-
-
+const timeOff = '2023/07/30 14:56';
 
 const timer = (deadline) => {
+    const timeOfDiscount = document.querySelector('.gallery__text--timer');
+// timeOfDiscount.setAttribute('data-deadline', '2023/07/30 14:56');
+// const timeOutDiscount = timeOfDiscount.getAttribute('data-deadline');
+const timeDescription = document.querySelector('.gallery__text--descrip');
+
     const timerBlockDays = document.querySelector('.gallery__big-figure--days');
     const timerBlockHours = document.querySelector('.gallery__big-figure--hours');
     const timerBlockMinutes = document.querySelector('.gallery__big-figure--minutes');
@@ -137,6 +137,9 @@ const timer = (deadline) => {
     
 };
 
-timer(timeOutDiscount);
+if(location.pathname === '/index.html' || location.pathname === '/'){
+    timer(timeOff);
+}
+
 
 

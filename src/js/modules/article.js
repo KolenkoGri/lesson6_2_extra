@@ -9,20 +9,8 @@ export const loadArticles = async (url = 'https://gorest.co.in/public-api/posts'
     return data;
 }
 
-const loadPagination = () => {
-    const paginationNumber = document.querySelectorAll('.pagination__number');
-    paginationNumber.forEach((p) => {
-        p.addEventListener('click', () => {
-            articleList.replaceChildren();
-            pagination.replaceChildren();
-            loadArticles(`https://gorest.co.in/public-api/posts?page=${p.textContent}`);
-            renderArticles();
-        });
-    });
-};
-
-const renderArticles = async () => {
-    const data = await loadArticles();
+const renderArticles = async (url) => {
+    const data = await loadArticles(url);
     data.data.map((item) => {
         articleList.insertAdjacentHTML('beforeend', `
         <li class="article__item">
@@ -45,6 +33,18 @@ const renderArticles = async () => {
         `);
     });
 
+    const loadPagination = () => {
+        const paginationNumber = document.querySelectorAll('.pagination__number');
+        paginationNumber.forEach((p) => {
+            p.addEventListener('click', () => {
+                console.log(p.textContent);
+                articleList.replaceChildren();
+                pagination.replaceChildren();
+                renderArticles(`https://gorest.co.in/public-api/posts?page=${p.textContent}`);
+            });
+        });
+    };
+
     for (let i = 1; i <= data.meta.pagination.pages; i ++ ){
         pagination.insertAdjacentHTML('beforeend', `
         <a class="pagination__number">${i}</a>
@@ -54,8 +54,7 @@ const renderArticles = async () => {
         if(data.meta.pagination.page !== 1) {
             articleList.replaceChildren();
             pagination.replaceChildren();
-            loadArticles(`https://gorest.co.in/public-api/posts?page=${data.meta.pagination.page - 1}`);
-            renderArticles();
+            renderArticles(`https://gorest.co.in/public-api/posts?page=${data.meta.pagination.page - 1}`);
         }
     });
 
@@ -63,14 +62,16 @@ const renderArticles = async () => {
         if(data.meta.pagination.page !== data.meta.pagination.pages) {
             articleList.replaceChildren();
             pagination.replaceChildren();
-            loadArticles(`https://gorest.co.in/public-api/posts?page=${data.meta.pagination.page + 1}`);
-            renderArticles();
+            renderArticles(`https://gorest.co.in/public-api/posts?page=${data.meta.pagination.page + 1}`);
         }
     });
 
     loadPagination();
 }
 
-renderArticles();
+if(location.pathname === '/blog.html'){
+    renderArticles();
+}
+
 
 

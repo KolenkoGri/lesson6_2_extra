@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/index.css">
+    <script type="module" src="js/script.js"></script>
+    <title>Basket</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <nav class="header__navigation">
+                <h1 class="header__title" tabindex="1"> Shop<span class="header__name header__name--blue"> Online </span> </h1>
+                <button class="header__button">Меню</button>
+                <div class="header__menu">
+                    <button class="header__icon header__icon--one">
+                        <div class="header__block header__block--one"></div>
+                        <p class="header__signature">Профиль</p>
+                    </button>
+                    <button class="header__icon header__icon--two">
+                        <div class="header__block header__block--two">
+                            <p class="header__count-basket">2</p>
+                        </div>
+                        <p class="header__signature">Корзина</p>
+                    </button>
+                    <button class="header__icon header__icon--three">
+                        <div class="header__block header__block--three"></div>
+                        <p class="header__signature">Избранное</p>
+                    </button>
+                </div>
+                <div class="input__block">
+                        <label for="search">
+                            <input class="header__input" id="search" name="search" type="text" placeholder="Я ищу...">
+                            <button class="header__search"></button>
+                        </label>
+                    </div>
+            </nav>
+        </div>
+    </header>
+    <footer class="footer menu">
+        <div class="container footer__container">
+            <div class="footer__block">
+                <div class="footer__catalog">Каталог</div>
+                <div class="footer__empty"></div>
+                <div class="footer__buyer">Покупателям</div>
+                <div class="footer__contacts">Контакты</div>
+            </div>
+            <div class="footer__info">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="category.html">Смартфоны </a></li>
+                    <li class="footer__item"><a href="card.html">Ноутбуки</a></li>
+                    <li class="footer__item"><a href="category.html">Ювелирные</a> изделия</li>
+                    <li class="footer__item"><a href="category.html">Одежда</a></li>
+                    <li class="footer__item"><a href="category.html">Бытовая техника</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="category.html">Бытовая химия</a></li>
+                    <li class="footer__item"><a href="category.html">Книги и журналы</a></li>
+                    <li class="footer__item"><a href="category.html">Домашний текстиль</a></li>
+                    <li class="footer__item"><a href="category.html">Электроника</a></li>
+                    <li class="footer__item"><a href="category.html">Косметика</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="basket.html">Оплата заказа</a></li>
+                    <li class="footer__item"><a href="basket.html">Условия доставки</a></li>
+                    <li class="footer__item"><a href="basket.html">Условия возврата заказа</a></li>
+                    <li class="footer__item"><a href="blog.html">Блог</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"> 
+                        <a href="#">Тел: +7 937 839 23-61</a> </li>
+                    <li class="footer__item">
+                        <a href="#">Email: OnlineShop@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <main class="main">
+        <section class="basket">
+            <div class="container main__container">
+                <div class="basket__grids">
+                    <div class="basket__all">
+                        <h2 class="basket__title">Корзина <span class="basket__count">2</span></h2>
+                        <div class="basket__checking">
+                            <input class="basket__checkbox" type="checkbox"><p class="basket__text">Выбрать все</p>
+                        </div>
+                        <div class="basket__block">
+                            <div class="basket__line"></div>
+                            <div class="basket__table">
+                                <div class="basket__item">
+                                    <div class="basket__picture">
+                                        <input type="checkbox" class="basket__checkbox basket__checkbox-item">
+                                        <div class="basket__item-image"></div>
+                                    </div>
+                                    <div class="basket__item-info">
+                                        <div class="basket__price">
+                                            <div class="basket__price-new">109 090 ₽</div>
+                                            <div class="basket__price-old">140 590 ₽</div>
+                                        </div>
+                                        <div class="basket__credit">В кредит от 5600 ₽ </div>
+                                        <div class="basket__description">15.6" Игровой ноутбук ASUS G513IE-HN004T</div>
+                                    </div>
+                                    <div class="basket__item-edit">
+                                        <div class="basket__counter">
+                                            <div class="basket__counter-minus">-</div>
+                                            <div class="basket__counter-number">1</div>
+                                            <div class="basket__counter-plus">+</div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__garbage">
+                                        <div class="basket__garbage-image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="basket__block">
+                            <div class="basket__line"></div>
+                            <div class="basket__table">
+                                <div class="basket__item">
+                                    <div class="basket__picture">
+                                        <input type="checkbox" class="basket__checkbox basket__checkbox-item">
+                                        <div class="basket__item-image"></div>
+                                    </div>
+                                    <div class="basket__item-info">
+                                        <div class="basket__price">
+                                            <div class="basket__price-new">109 090 ₽</div>
+                                            <div class="basket__price-old">140 590 ₽</div>
+                                        </div>
+                                        <div class="basket__credit">В кредит от 5600 ₽ </div>
+                                        <div class="basket__description">15.6" Игровой ноутбук ASUS G513IE-HN004T</div>
+                                    </div>
+                                    <div class="basket__item-edit">
+                                        <div class="basket__counter">
+                                            <div class="basket__counter-minus">-</div>
+                                            <div class="basket__counter-number">1</div>
+                                            <div class="basket__counter-plus">+</div>
+                                        </div>
+                                    </div>
+                                    <div class="basket__garbage">
+                                        <div class="basket__garbage-image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__delivery">
+                        <div class="basket__way-text">Способ доставки</div>
+                        <div class="basket__delivery-edit">Изменить</div>
+                        <div class="basket__default">Пункт выдачи</div>
+
+                        <div class="basket__address">г. Москва (Московская область), улица Павлика Морозова, д. 48, (Пункт выдачи), Ежедневно 10:00-21:00</div>
+                        <div class="basket__default">Стоимость доставки</div>
+
+                        <div class="basket__delivery-price">Бесплатная доставка</div>
+                        <div class="basket__line basket__line-bottom"></div>
+                        <div class="basket__delivery-date">10-13 февраля</div>
+                        <div class="basket__delivery-image">
+                            <div class="basket__item-image--mini"></div>
+                            <div class="basket__item-image--mini"></div>
+                        </div>
+                    </div>
+                    <div class="basket__total-all">
+                        <div class="basket__total">
+                            <div class="basket__total-default">
+                                <div class="basket__total-allin">Итого</div>
+                                <div class="basket__total-text">Товары <span class="basket__total-count">2  шт. </span> </div>
+                                <div class="basket__total-text">Скидка</div>
+                                <div class="basket__total-text">Доставка</div>
+                                <div class="basket__total-text--bold">Доставка:</div>  
+                            </div>
+                            <div class="basket__total-default basket__total-default-right">
+                                <div class="basket__total-sum">218 080 ₽</div>
+                                <div class="basket__total-without-discount">281 080 ₽</div>
+                                <div class="basket__total-discount">63 000 ₽</div>
+                                <div class="basket__total-delivery">Бесплатно</div>
+                                <div class="basket__total-placement">Пункт выдачи</div> 
+                            </div>                    
+                        </div>
+                        <div class="basket__total-default">Ежедневно 10:00 - 21:00</div>
+                        <div class="basket__total-default">г. Москва (Московская область), улица Павлика Морозова, д. 48</div>
+                        <div class="basket__total">
+                            <div class="basket__total-default">
+                                <div class="basket__total-text--bold">Дата:</div>
+                                <div class="basket__total-text--bold">Оплата: </div>
+                            </div>
+                            <div class="basket__total-default basket__total-default-right">
+                                <div class="basket__total-placement">10-13 февраля</div>
+                                <div class="basket__total-placement">Картой</div>
+                            </div> 
+                        </div>
+                        <button class="basket__submit">Заказать</button>
+                        <div class="basket__agreement">
+                            <label for="" class="basket__label">
+                                <input class="basket__checkbox" type="checkbox">
+                            </label>
+                            <span class="basket__condition"> Согласен с условиями <span class="basket__condition-grey"> правил пользования торговой площадкой и правилами возврата</span> </span> 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="benefit">
+            <div class="container benefit__container">
+                <h2 class="benefit__title">Это выгодно!</h2>
+                <div class="benefit__rows">
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount" aria-label="Старая цена">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                    <div class="benefit__block" tabindex="0">
+                        <div class="benefit__image">
+                            <div class="benefit__advantage"></div>
+                        </div>
+                        <div class="benefit__price">
+                            <div class="benefit__discount">
+                                1299 ₽
+                            </div>
+                            <div class="benefit__full">2598 ₽</div>
+                        </div>
+                        <div class="benefit__item">Пара футболок</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__block">
+                <h2 class="footer__title"> Shop<span class="footer__name footer__name--blue"> Online </span> </h2>
+                <div class="footer__catalog">Каталог</div>
+                <div class="footer__empty"></div>
+                <div class="footer__buyer">Покупателям</div>
+                <div class="footer__contacts">Контакты</div>
+            </div>
+            <div class="footer__info">
+                <div class="footer__empty"></div>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="category.html">Смартфоны </a></li>
+                    <li class="footer__item"><a href="card.html">Ноутбуки</a></li>
+                    <li class="footer__item"><a href="category.html">Ювелирные</a> изделия</li>
+                    <li class="footer__item"><a href="category.html">Одежда</a></li>
+                    <li class="footer__item"><a href="category.html">Бытовая техника</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="category.html">Бытовая химия</a></li>
+                    <li class="footer__item"><a href="category.html">Книги и журналы</a></li>
+                    <li class="footer__item"><a href="category.html">Домашний текстиль</a></li>
+                    <li class="footer__item"><a href="category.html">Электроника</a></li>
+                    <li class="footer__item"><a href="category.html">Косметика</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="basket.html">Оплата заказа</a></li>
+                    <li class="footer__item"><a href="basket.html">Условия доставки</a></li>
+                    <li class="footer__item"><a href="basket.html">Условия возврата заказа</a></li>
+                    <li class="footer__item"><a href="blog.html">Блог</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"> 
+                        <a href="#">Тел: +7 937 839 23-61</a> </li>
+                    <li class="footer__item">
+                        <a href="#">Email: OnlineShop@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -57,4 +57,8 @@ const renderPage = async() => {
         `)
 };
 
-renderPage();
+
+if(location.pathname === '/page.html'){
+    renderPage();
+}
+
