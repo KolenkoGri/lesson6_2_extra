@@ -163,10 +163,22 @@
         line-height: 19px;
         letter-spacing: 0em;
         text-align: right;
+        display: flex;
         @media (min-width:1024px) {
             font-size: 26px;
             line-height: 31px;
         }
+    }
+
+    &__total-without-discount {
+        display: flex;
+        justify-content: right;
+
+    }
+
+    &__total-discount {
+        display: flex;
+        justify-content: right;
     }
 
     &__price-old{
@@ -176,6 +188,7 @@
         letter-spacing: 0em;
         text-align: right;
         text-decoration: line-through;
+        display: flex;
 
         @media (min-width:1024px) {
             font-size: 18px;
@@ -441,11 +454,18 @@
         font-weight: 700;
         line-height: 19px;
         letter-spacing: 0em;
+        display: flex;
+        justify-content: right;
         @media (min-width:1024px) {
             font-size: 26px;
             line-height: 31px;
         }
     } 
+
+    &__without-discount {
+        display: flex;
+        justify-content: right;
+    }
     &__total-text {
         font-size: 10px;
         font-weight: 400;
