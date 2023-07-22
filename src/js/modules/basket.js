@@ -49,7 +49,6 @@ if(location.pathname === '/basket.html'){
 
         remove.forEach((el) => {
             el.addEventListener('click', () => {
-                console.log(el.closest('.basket__block'));
                 el.closest('.basket__block').remove();
                 basketDeliveryImage.firstChild.remove();
                 startData();  

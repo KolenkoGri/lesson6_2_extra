@@ -1,10 +1,10 @@
 const timeOff = '2023/07/30 14:56';
 
+import { declOfNum, addZero } from "./utilities/timeHelper.js";
+
 const timer = (deadline) => {
     const timeOfDiscount = document.querySelector('.gallery__text--timer');
-// timeOfDiscount.setAttribute('data-deadline', '2023/07/30 14:56');
-// const timeOutDiscount = timeOfDiscount.getAttribute('data-deadline');
-const timeDescription = document.querySelector('.gallery__text--descrip');
+    const timeDescription = document.querySelector('.gallery__text--descrip');
 
     const timerBlockDays = document.querySelector('.gallery__big-figure--days');
     const timerBlockHours = document.querySelector('.gallery__big-figure--hours');
@@ -37,39 +37,16 @@ const timeDescription = document.querySelector('.gallery__text--descrip');
 
     const start = () => {
         const timer = getTimeRemaining();
-        let day = ' дней ';
-        let hour = ' часов ';
-        let minutes = ' минут ';
-        let seconds = ' секунд ';
+        let day = declOfNum(timer.days, [' день', ' дня', ' дней']);
+        let hour = declOfNum(timer.hours, [' час', ' часа', ' часов']);;
+        let minutes = declOfNum(timer.minutes, [' минута', ' минуты', ' минут']);;
+        let seconds = declOfNum(timer.seconds, [' секунда', ' секунды', ' секунд']);;
 
-        if (timer.seconds % 10 === 1 && timer.seconds !== 11){
-            seconds = ' секунда ';
-        } else if (timer.seconds % 10 >= 2 && timer.seconds % 10 <= 4 ){
-            seconds = ' секунды '
-        }
 
-        if (timer.days % 10 === 1 && timer.days !== 11){
-            day = ' день ';
-        } else if (timer.days % 10 >= 2 && timer.days % 10 <= 4 ){
-            day = ' дня '
-        }
-
-        if (timer.hours % 10 === 1 && timer.hours !== 11){
-            hour = ' час ';
-        } else if (timer.hours % 10 >= 2 && timer.hours % 10 <= 4 ){
-            hour = ' часа '
-        }
-
-        if (timer.minutes % 10 === 1 && timer.minutes !== 11){
-            minutes = ' минута ';
-        } else if (timer.minutes % 10 >= 2 && timer.minutes % 10 <= 4 ){
-            minutes = ' минуты '
-        }
-
-        timerBlockDays.textContent = timer.days < 10 ? '0' + timer.days + day : timer.days + day;
-        timerBlockHours.textContent = timer.hours < 10 ? "0" + timer.hours + hour : timer.hours  + hour;
-        timerBlockMinutes.textContent = timer.minutes <10 ? '0' + timer.minutes + minutes : timer.minutes + minutes;
-        timerBlockSeconds.textContent = timer.seconds <10 ? '0' + timer.seconds + seconds : timer.seconds + seconds;
+        timerBlockDays.textContent = addZero(timer.days,day);
+        timerBlockHours.textContent = addZero(timer.hours,hour);
+        timerBlockMinutes.textContent = addZero(timer.minutes,minutes);
+        timerBlockSeconds.textContent = addZero(timer.seconds,seconds);
 
         let intervalId = setInterval(start, 60000);
 
